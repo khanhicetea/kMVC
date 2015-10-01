@@ -1,0 +1,60 @@
+            <!-- forms -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>Products</h5>
+                </div>
+                <!-- end box / title -->
+
+                {if="isset($error)"}
+                <div id="message-error" class="message message-error">
+                    <div class="image">
+                        <img src="{$baseURL}/styles/admin/images/icons/error.png" alt="Error" height="32" />
+                    </div>
+                    <div class="text">
+                        <h6>Error Message</h6>
+                        <span>{$error}</span>
+                    </div>
+                    <div class="dismiss">
+                        <a href="#message-error"></a>
+                    </div>
+                </div>
+                {/if}
+
+                <form id="form" action="" enctype="multipart/form-data" method="post">
+                    <div class="form">
+                        <div class="fields">
+                        	<div class="field  field-first">
+                                <div class="label">
+                                    <label for="product_name">Product name :</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="product_name" name="product_name" class="small" value="{if="isset($product.product_name)"}{$product.product_name}{/if}" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="label">
+                                    <label for="product_info">Product info :</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="product_info" name="product_info" class="large" value="{if="isset($product.product_info)"}{$product.product_info}{/if}" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="label">
+                                    <label for="product_img">Product Image :</label>
+                                </div>
+                                <div class="input">
+                                    {if="isset($product.product_img)"}<img src="{$baseURL}/{$product.product_img}" width="160" height="90" /><br /><br />{/if}<input type="file" id="product_img" name="product_img" class="medium" />
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <input type="hidden" name="action" value="{$action}">
+                                <input type="submit" name="submit" value="OK" />
+                                <input type="reset" name="reset" value="Reset" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- end forms -->

@@ -1,0 +1,43 @@
+            <!-- table -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>Users</h5>
+                </div>
+                <!-- end box / title -->
+                <div class="table">
+                    <form action="#" method="post">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="left">ID</th>
+                                <th>Name</th>
+                                <th>Permission</th>
+                                <th>Control</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {loop="users"}
+                            <tr>
+                                <td>{$value.user_id}</td>
+                                <td>{$value.user_name}</td>
+                                <td>{$value.user_permission}</td>
+                                <td>
+                                    <a href="{$baseURL}/admin/user/update/{$value.user_id}" title="Edit">Edit</a>
+                                    |
+                                    <a href="{$baseURL}/admin/user/delete/{$value.user_id}" title="Delete">Delete</a>
+                                </td>
+                            </tr>
+                            {/loop}
+                            </tbody>
+                        </table>
+                        <!-- pagination -->
+                        <div class="pagination pagination-left">
+                            <ul class="pager">
+                            </ul>
+                        </div>
+                        <!-- end pagination -->
+                    </form>
+                </div>
+            </div>
+            <!-- end table -->

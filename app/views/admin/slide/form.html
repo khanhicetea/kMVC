@@ -1,0 +1,44 @@
+            <!-- forms -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>Slides</h5>
+                </div>
+                <!-- end box / title -->
+
+                {if="isset($error)"}
+                <div id="message-error" class="message message-error">
+                    <div class="image">
+                        <img src="{$baseURL}/styles/admin/images/icons/error.png" alt="Error" height="32" />
+                    </div>
+                    <div class="text">
+                        <h6>Error Message</h6>
+                        <span>{$error}</span>
+                    </div>
+                    <div class="dismiss">
+                        <a href="#message-error"></a>
+                    </div>
+                </div>
+                {/if}
+
+                <form id="form" action="" enctype="multipart/form-data" method="post">
+                    <div class="form">
+                        <div class="fields">
+                            <div class="field">
+                                <div class="label">
+                                    <label for="slide_img">Slide Image :</label>
+                                </div>
+                                <div class="input">
+                                    {if="isset($slide.slide_img)"}<img src="{$baseURL}/{$slide.slide_img}" width="160" height="90" /><br /><br />{/if}<input type="file" id="slide_img" name="slide_img" class="medium" />
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <input type="hidden" name="action" value="{$action}">
+                                <input type="submit" name="submit" value="OK" />
+                                <input type="reset" name="reset" value="Reset" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- end forms -->

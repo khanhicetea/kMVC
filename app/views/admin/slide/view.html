@@ -1,0 +1,42 @@
+            <!-- table -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>Slides</h5>
+                </div>
+                <!-- end box / title -->
+                <div class="table">
+                    <form action="#" method="post">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="left">ID</th>
+                                <th>Image</th>
+                                <th>Control</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {loop="slides"}
+                            <tr>
+                                <td>{$value.slide_id}</td>
+                                <td><img src="{$baseURL}/{$value.slide_img}" width="100px" height="100px" /></td>
+                                <td>
+                                    <a href="{$baseURL}/admin/slide/update/{$value.slide_id}" title="Edit">Edit</a>
+                                    |
+                                    <a href="{$baseURL}/admin/slide/delete/{$value.slide_id}" title="Delete">Delete</a>
+                                </td>
+                            </tr>
+                            {/loop}
+                            </tbody>
+                        </table>
+                        <!-- pagination -->
+                        <div class="pagination pagination-left">
+                            <ul class="pager">
+                                
+                            </ul>
+                        </div>
+                        <!-- end pagination -->
+                    </form>
+                </div>
+            </div>
+            <!-- end table -->

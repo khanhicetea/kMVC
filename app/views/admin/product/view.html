@@ -1,0 +1,44 @@
+            <!-- table -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>Products</h5>
+                </div>
+                <!-- end box / title -->
+                <div class="table">
+                    <form action="#" method="post">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="left">ID</th>
+                                <th>Name</th>
+                                <th>Image</th>
+                                <th>Control</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {loop="products"}
+                            <tr>
+                                <td>{$value.product_id}</td>
+                                <td>{$value.product_name}</td>
+                                <td><img src="{$baseURL}/{$value.product_img}" width="100px" height="100px" /></td>
+                                <td>
+                                    <a href="{$baseURL}/admin/product/update/{$value.product_id}" title="Edit">Edit</a>
+                                    |
+                                    <a href="{$baseURL}/admin/product/delete/{$value.product_id}" title="Delete">Delete</a>
+                                </td>
+                            </tr>
+                            {/loop}
+                            </tbody>
+                        </table>
+                        <!-- pagination -->
+                        <div class="pagination pagination-left">
+                            <ul class="pager">
+                                
+                            </ul>
+                        </div>
+                        <!-- end pagination -->
+                    </form>
+                </div>
+            </div>
+            <!-- end table -->

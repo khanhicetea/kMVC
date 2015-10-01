@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+		<title>Login to ACP</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<!-- stylesheets -->
+		<link rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/style.css" media="screen" />
+		<link id="color" rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/colors/blue.css" />
+	</head>
+	<body>
+		<div id="login">
+			<!-- login -->
+			<div class="title">
+				<h5>Sign In to ACP</h5>
+				<div class="corner tl"></div>
+				<div class="corner tr"></div>
+			</div>
+			<div class="inner">
+				<form action="{$baseURL}/admin/auth/login" method="post" name="loginform" onsubmit="return validateForm();">
+				<div class="form">
+					<!-- fields -->
+					<div class="fields">
+						<div class="field">
+							<div class="label">
+								<label for="username">Username :</label>
+							</div>
+							<div class="input">
+								<input type="text" id="username" name="username" size="40" value="" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="password">Password :</label>
+							</div>
+							<div class="input">
+								<input type="password" id="password" name="password" size="40" value="" />
+							</div>
+						</div>
+                        <br />
+						<div class="buttons">
+                            <input type="hidden" name="action" value="login" />
+							<input type="submit" value="Sign In" />
+						</div>
+					</div>
+					<!-- end fields -->
+				</div>
+				</form>
+			</div>
+			<!-- end login -->
+		</div>
+        <script type="text/javascript">
+            var frm = document.loginform;
+            frm.username.focus();
+            function validateForm()
+            {
+                if (frm.username.value == "" || frm.password.value == "")
+                {
+                    alert("Please input your username & password !");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+	</body>
+
+
+</html>

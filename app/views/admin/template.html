@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+		<title>ADMIN CP</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="robots" content="noindex, nofollow" />
+		<!-- stylesheets -->
+		<link rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/style_fixed_full.css" />
+		<link id="color" rel="stylesheet" type="text/css" href="{$baseURL}/styles/admin/css/colors/blue.css" />
+		<!-- scripts (jquery) -->
+		<script src="{$baseURL}/styles/admin/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!-- scripts (custom) -->
+		<script src="{$baseURL}/styles/admin/scripts/smooth.js" type="text/javascript"></script>
+		<script src="{$baseURL}/styles/admin/scripts/smooth.menu.js" type="text/javascript"></script>
+		<script src="{$baseURL}/styles/admin/scripts/smooth.table.js" type="text/javascript"></script>
+		<script src="{$baseURL}/styles/admin/scripts/smooth.form.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!-- header -->
+		<div id="header">
+			<div id="header-outer">
+				<!-- logo -->
+				<div id="logo">
+					<h1><a href="{$baseURL}/admin/dashboard" title="ACP">ACP</a></h1>
+				</div>
+				<!-- end logo -->
+				<!-- user -->
+				<ul id="user">
+					<li class="first">Welcome,</li>
+					<li><a href="{$baseURL}/admin/auth/logout">Logout</a></li>
+					<li class="last highlight"><a href="{$baseURL}">View Site</a></li>
+				</ul>
+				<!-- end user -->
+				<div id="header-inner">
+					<div id="home">
+						<a href="{$baseURL}/admin/dashboard"></a>
+					</div>
+					<!-- quick -->
+					<ul id="quick">
+						<li>
+							<a href="#" title="News"><span class="normal">Slideshows</span></a>
+							<ul>
+								<li><a href="{$baseURL}/admin/slide">View list</a></li>
+								<li><a href="{$baseURL}/admin/slide/add">Add slideshow</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" title="Customers"><span class="normal">Products</span></a>
+							<ul>
+								<li><a href="{$baseURL}/admin/product">View list</a></li>
+								<li><a href="{$baseURL}/admin/product/add">Add new product</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" title="Questions"><span class="normal">News</span></a>
+							<ul>
+								<li><a href="{$baseURL}/admin/news">View list</a></li>
+								<li><a href="{$baseURL}/admin/news/add">Add new news</a></li>
+							</ul>
+						</li>
+                        <li>
+                            <a href="#" title="Users"><span class="normal">Users</span></a>
+                            <ul>
+                                <li><a href="{$baseURL}/admin/user">View list</a></li>
+                                <li><a href="{$baseURL}/admin/user/add">Add new user</a></li>
+                            </ul>
+                        </li>
+						<li>
+							<a href="#" title="Settings"><span class="icon"><img src="{$baseURL}/styles/admin/images/icons/cog.png" alt="Settings" /></span><span>Profile</span></a>
+							<ul>
+								<li><a href="{$baseURL}/admin/profile">Change Password</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- end quick -->
+					<div class="corner tl"></div>
+					<div class="corner tr"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end header -->
+		<!-- content -->
+		<div id="content">
+            {include="$mainContentFile"}
+		</div>
+		<!-- end content -->
+		<!-- footer -->
+		<div id="footer">
+			<p>Copyright &copy; {function="date('Y')"} KhanhND. All Rights Reserved. Coded by Khanh.ND</p>
+		</div>
+		<!-- end footert -->
+	</body>
+
+
+</html>

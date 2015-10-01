@@ -1,0 +1,63 @@
+            <!-- forms -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>User</h5>
+                </div>
+                <!-- end box / title -->
+
+                {if="isset($error)"}
+                <div id="message-error" class="message message-error">
+                    <div class="image">
+                        <img src="{$baseURL}/styles/admin/images/icons/error.png" alt="Error" height="32" />
+                    </div>
+                    <div class="text">
+                        <h6>Error Message</h6>
+                        <span>{$error}</span>
+                    </div>
+                    <div class="dismiss">
+                        <a href="#message-error"></a>
+                    </div>
+                </div>
+                {/if}
+
+                <form id="form" action="" method="post">
+                    <div class="form">
+                        <div class="fields">
+                            <div class="field  field-first">
+                                <div class="label">
+                                    <label for="user_name">Username :</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="user_name" name="user_name" class="small" value="{if="isset($user.user_name)"}{$user.user_name}{/if}" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="label">
+                                    <label for="user_password">Password :</label>
+                                </div>
+                                <div class="input">
+                                    <input type="password" id="user_password" name="user_password" class="medium" value="" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="label">
+                                    <label for="user_permission">User permission :</label>
+                                </div>
+                                <div class="input">
+                                    <select id="user_permission" name="user_permission">
+                                        <option value="admin"{if="isset($user) && $user.user_permission == 'admin'"} selected="selected"{/if}>Admin</option>
+                                        <option value="mod"{if="isset($user) && $user.user_permission == 'mod'"} selected="selected"{/if}>MOD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <input type="hidden" name="action" value="{$action}">
+                                <input type="submit" name="submit" value="OK" />
+                                <input type="reset" name="reset" value="Reset" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- end forms -->

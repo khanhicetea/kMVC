@@ -1,0 +1,42 @@
+            <!-- table -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>News</h5>
+                </div>
+                <!-- end box / title -->
+                <div class="table">
+                    <form action="#" method="post">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="left">ID</th>
+                                <th>Title</th>
+                                <th>Control</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {loop="news"}
+                            <tr>
+                                <td>{$value.news_id}</td>
+                                <td>{$value.news_title}</td>
+                                <td>
+                                    <a href="{$baseURL}/admin/news/update/{$value.news_id}" title="Edit">Edit</a>
+                                    |
+                                    <a href="{$baseURL}/admin/news/delete/{$value.news_id}" title="Delete">Delete</a>
+                                </td>
+                            </tr>
+                            {/loop}
+                            </tbody>
+                        </table>
+                        <!-- pagination -->
+                        <div class="pagination pagination-left">
+                            <ul class="pager">
+                                
+                            </ul>
+                        </div>
+                        <!-- end pagination -->
+                    </form>
+                </div>
+            </div>
+            <!-- end table -->

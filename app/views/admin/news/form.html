@@ -1,0 +1,52 @@
+            <!-- forms -->
+            <div class="box">
+                <!-- box / title -->
+                <div class="title">
+                    <h5>News</h5>
+                </div>
+                <!-- end box / title -->
+
+                {if="isset($error)"}
+                <div id="message-error" class="message message-error">
+                    <div class="image">
+                        <img src="{$baseURL}/styles/admin/images/icons/error.png" alt="Error" height="32" />
+                    </div>
+                    <div class="text">
+                        <h6>Error Message</h6>
+                        <span>{$error}</span>
+                    </div>
+                    <div class="dismiss">
+                        <a href="#message-error"></a>
+                    </div>
+                </div>
+                {/if}
+
+                <form id="form" action="" enctype="multipart/form-data" method="post">
+                    <div class="form">
+                        <div class="fields">
+                        	<div class="field  field-first">
+                                <div class="label">
+                                    <label for="user_name">News title :</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="news_title" name="news_title" class="small" value="{if="isset($news.news_title)"}{$news.news_title}{/if}" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="label">
+                                    <label for="user_name">News content :</label>
+                                </div>
+                                <div class="input">
+                                    <textarea id="news_content" name="news_content" cols="60" rows="10">{if="isset($news.news_content)"}{$news.news_content}{/if}</textarea>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <input type="hidden" name="action" value="{$action}">
+                                <input type="submit" name="submit" value="OK" />
+                                <input type="reset" name="reset" value="Reset" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- end forms -->

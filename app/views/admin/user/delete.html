@@ -1,0 +1,17 @@
+<!-- table -->
+<div class="box">
+    <!-- box / title -->
+    <div class="title">
+        <h5>Categories</h5>
+    </div>
+    <!-- end box / title -->
+    <div align="center">
+        <h4>Do you want to delete '{if="isset($user.user_name)"}{$user.user_name}{/if}' ?</h4>
+        <p>
+            <a href="{$baseURL}/admin/user/delete/{$user.user_id}/yes" title="Yes">Yes</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="{$baseURL}/admin/user" title="No">No</a>
+        </p>
+    </div>
+</div>
+<!-- end table -->
